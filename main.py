@@ -14,15 +14,35 @@ def ping():
     return 'pong' 
     
 '''
-# Ejemplo 2 
+# Ejemplo 2
+'''
 from productos import productos
 @app.route('/ping')
 def ping():
-    return 
+    return jsonify({"message":"pong!"})
+'''
+'''
+# Ejemplo 3
+from productos import productos
+@app.route('/')
+def ping():
+    return jsonify({"message":"pong!"})
+'''
 
 
 
 
+
+
+from productos import productos
+
+@app.route('/ping')
+def ping():
+    return jsonify({"message":"pong!"})
+
+@app.route('/productos')
+def getProductos(): 
+    return jsonify(productos)
 
 
 
